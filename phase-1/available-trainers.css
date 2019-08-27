@@ -1,0 +1,30 @@
+body {
+    background-image:url('light background.jpg');
+    background-size: cover;
+     /* background-position:center;  */
+}
+.form-control.mr-sm-2{
+    width: 20%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.navbar.navbar-expand.navbar-dark.bg-dark{
+    height: 10%;
+}
+.nav-item.active.nav-link{
+    float: right;
+    margin-right: 0%;
+}
+.container.i{
+    margin-right: 1%;
+}
+.btn.btn-default.btn-lg.btn-block.btn-huge{
+    background-color: grey;
+    color: black;
+}
+hr{
+    margin-left: -17%;
+}
+.container.table{
+    margin-left: -10%;
+}

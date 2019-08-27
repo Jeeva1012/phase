@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Available trainners</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='available-trainers.css'>
+    <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src='main.js'></script>
+    <script>
+     function myFunction() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+        
+        
+        
+        function myfunction() { 
+        
+          var trainer_details = [
+            ['Ragavan','Spring','10days', '4', '3'],
+            ['Ram', 'NodeJS','8days','4', '4'],
+            ['John','ReactJS','10days', '4', '4'],
+            ['Diensh','AngularJS','10days', '4', '3'],
+            ['Ragavan', 'mongoDB','2days','4', '4'],
+            ['John','HTML & CSS','2days', '4', '4'],
+            ['Dinesh','Javascript & Jquery','3days', '4', '3'],
+            ['Ram','Amazon Cloud','10days', '4', '4']
+            
+        ];
+        
+        var data='<table class="table" id="myTable"><thead><tr><th>Trainer</th><th>TrainerName</th><th>Course Name</th><th>Time Duration</th><th>Average Rating</th><th>No.of.Traings Completed</th><th></th></tr><tbody>';
+        
+        for(i=0;i<8;i++)
+        {
+          data = data + '<tr><td><img src="user_icon.jpg" width="42" height="42"></td>';
+          for(j=0;j<5;j++)
+          {
+            data = data + '<td>'+trainer_details[i][j]+'</td>';
+          }
+        
+          data = data + '<td><a href="login_page.html" class="btn btn-primary" style="width:10em" role="button">Propose Training</a></td></tr>';
+          
+        }
+        
+        data = data + '</tbody></table>';
+        document.getElementById('demo').innerHTML=data;  
+         }  
+    
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        
+        <input type="search" class="form-control mr-sm-2" id="myInput" onkeyup="myFunction()" placeholder="Search" >
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             
+                <form class="form-inline my-2 mylg-0"></div>
+                    <ul class="navbar-nav mr-auto"> 
+                <a href="#" class="nav-item active nav-link">Notification</a>
+                <a href="#" class="nav item active nav-link">Logout</a>
+            </ul>
+                </form>       
+        </div>
+    </nav>
+    <div class="container i">
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <a href="#"  class="btn btn-default btn-lg btn-block btn-huge active">Search Training</a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="btn btn-default btn-lg btn-block btn-huge">Current Training</a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="btn btn-default btn-lg btn-block btn-huge">Completed Training</a>
+            </div>
+
+            </div>
+            <hr>
+            <div class="container table">
+          
+                <p id="demo"></p>
+                <script>myfunction() </script>      
+    
+        </div>
+</body>
+</html>

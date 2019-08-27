@@ -1,0 +1,10 @@
+body {
+    background-image:url('light background.jpg');
+    background-size: cover;
+     /* background-position:center;  */
+}
+.nav-item.active.nav-link{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-top: 1%;
+}

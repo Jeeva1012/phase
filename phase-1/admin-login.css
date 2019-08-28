@@ -1,0 +1,22 @@
+body {
+    background-image:url('background.jpg');
+  
+    background-size: cover;
+    background-position:center;
+    overflow: hidden;
+}
+  
+.form-control.i{
+    width: 150%;
+ }
+ .container{
+     width: 150%;
+     opacity: 0.85;
+ }
+ #ford-pass{
+     float: right;
+ }
+ #sign-up{
+     padding-top: 18px;
+ }
+ 

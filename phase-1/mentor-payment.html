@@ -3,10 +3,10 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>mentor-menu</title>
+    <title>mentor payments</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='mentor-menu.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='mentor-payment.css'>
     <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="bootstrap.min.js"></script>
     <script src="jquery.min.js"></script>
@@ -14,7 +14,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
     <script src='main.js'></script>
     <style>
       .checked {
@@ -46,33 +45,29 @@
         function myfunction() { 
         
           var trainer_details = [
-            ['Spring', `
-             <div class="w3-light-grey w3-round-xlarge">
-             <div class="w3-container w3-red w3-round-xlarge" style="width:25%">25%</div>`],
-            ['AngularJS', 
-            `<div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-container w3-blue w3-round-xlarge" style="width:50%">50%</div>`],
-            [ 'mongoDB',
-            `<div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-container w3-green w3-round-xlarge" style="width:80%">80%</div>`],
+            ['Spring','10days', `<div class="w3-light-grey w3-round-xlarge">
+             <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>`],
+            [ 'NodeJS','8days', `<div class="w3-light-grey w3-round-xlarge">
+             <div class="w3-container w3-blue w3-round-xlarge" style="width:75%">75%</div>`],
+            ['ReactJS','10days', `<div class="w3-light-grey w3-round-xlarge">
+             <div class="w3-container w3-blue w3-round-xlarge" style="width:50%">50%</div>`],
+            ['AngularJS','10days', `<div class="w3-light-grey w3-round-xlarge">
+             <div class="w3-container w3-blue w3-round-xlarge" style="width:75%">75%</div>`],
             
-            ['Amazon Cloud',
-            `<div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-container w3-orange w3-round-xlarge" style="width:40%">40%</div>`],
             
         ];
         
-        var data='<table class="table" id="myTable"><thead><tr><th>Course Name</th><th>Percentage Completed</th></tr><tbody>';
+        var data='<table class="table" id="myTable"><thead><tr><th>Course Name</th><th>Time Duration</th><th>Amount Paid</th></tr><tbody>';
         
         for(i=0;i<4;i++)
         {
           data = data + '<tr>';
-          for(j=0;j<2;j++)
+          for(j=0;j<3;j++)
           {
             data = data + '<td>'+trainer_details[i][j]+'</td>';
           }
         
-          
+          data = data + '</tr>';
           
         }
         
@@ -92,16 +87,16 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav mr-auto"> 
-            <a href="mentor-payment.html" class="nav-item active nav-link"><h5>Payments</h5></a>
-         
-        </ul>
+                <a href="mentor-payment.html" class="nav-item active nav-link"><h5>Payments</h5></a>
+             
+            </ul>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
              
                 <form class="form-inline my-2 mylg-0"></div>
                     <ul class="navbar-nav mr-auto"> 
                 <a href="#" class="nav-item active nav-link">Notification</a>
-                <a href="mentor-login.html" class="nav item active nav-link">Logout</a>
+                <a href="login-user.html" class="nav item active nav-link">Logout</a>
             </ul>
                 </form>     
                 
@@ -109,19 +104,18 @@
     </nav>
     <div class="container i">
         <br>
-        <div class="row">
-            <div class="col-md-3">
-                <a href="mentor-menu.html"  class="btn btn-default btn-lg btn-block btn-huge active">Current Training</a>
+        <!-- <div class="row">
+                <div class="col-md-3">
+                        <a href="mentor-menu.html"  class="btn btn-default btn-lg btn-block btn-huge active">Current Training</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="mentor-completed-training.html" class="btn btn-default btn-lg btn-block btn-huge">Completed Training</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="mentor-edit-skills.html" class="btn btn-default btn-lg btn-block btn-huge">Edit Skills</a>
+                    </div>
             </div>
-            <div class="col-md-3">
-                <a href="mentor-completed-training.html" class="btn btn-default btn-lg btn-block btn-huge">Completed Training</a>
-            </div>
-            <div class="col-md-3">
-                <a href="mentor-edit-skills.html" class="btn btn-default btn-lg btn-block btn-huge">Edit Skills</a>
-            </div>
-
-            </div>
-            <hr>
+            <hr> -->
             <div class="container table">
           
                 <p id="demo"></p>

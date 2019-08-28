@@ -12,7 +12,6 @@ body {
   .container{
       width: 150%;
       opacity: 0.85;
-      /* margin-top: -2.5%;  */
   }
   #ford-pass{
       float: right;

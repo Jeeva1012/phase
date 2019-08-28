@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>mentor-completed-training</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='mentor-completed-training.css'>
+    <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src='main.js'></script>
+    <style>
+      .checked {
+        color: orange;
+      }
+      </style>
+    <script>
+    //  function myFunction() {
+    //       var input, filter, table, tr, td, i, txtValue;
+    //       input = document.getElementById("myInput");
+    //       filter = input.value.toUpperCase();
+    //       table = document.getElementById("myTable");
+    //       tr = table.getElementsByTagName("tr");
+    //       for (i = 0; i < tr.length; i++) {
+    //         td = tr[i].getElementsByTagName("td")[2];
+    //         if (td) {
+    //           txtValue = td.textContent || td.innerText;
+    //           if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    //             tr[i].style.display = "";
+    //           } else {
+    //             tr[i].style.display = "none";
+    //           }
+    //         }       
+    //       }
+    //     }
+        
+        
+        
+        function myfunction() { 
+        
+          var trainer_details = [
+            ['ReactJS', `
+             <div class="w3-light-grey w3-round-xlarge">
+             <div class="w3-container w3-green w3-round-xlarge" style="width:100%">100%</div>`],
+            ['NodeJS', 
+            `<div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-container w3-green w3-round-xlarge" style="width:100%">100%</div>`],
+            [ 'HTML & CSS',
+            `<div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-container w3-green w3-round-xlarge" style="width:100%">100%</div>`],
+            
+            ['Javascript & Jquery',
+            `<div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-container w3-green w3-round-xlarge" style="width:100%">100%</div>`],
+            
+        ];
+        
+        var data='<table class="table" id="myTable"><thead><tr><th>Course Name</th><th>Percentage Completed</th></tr><tbody>';
+        
+        for(i=0;i<4;i++)
+        {
+          data = data + '<tr>';
+          for(j=0;j<2;j++)
+          {
+            data = data + '<td>'+trainer_details[i][j]+'</td>';
+          }
+        
+          
+          
+        }
+        
+        data = data + '</tbody></table>';
+        document.getElementById('demo').innerHTML=data;  
+         }  
+    
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        
+        <!-- <input type="search" class="form-control mr-sm-2" id="myInput" onkeyup="myFunction()" placeholder="Search" >
+                <button class="btn btn-outline-success" type="submit">Search</button> -->
+            
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav mr-auto"> 
+                <a href="mentor-payment.html" class="nav-item active nav-link"><h5>Payments</h5></a>
+             
+            </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             
+                <form class="form-inline my-2 mylg-0"></div>
+                    <ul class="navbar-nav mr-auto"> 
+                <a href="#" class="nav-item active nav-link">Notification</a>
+                <a href="mentor-login.html" class="nav item active nav-link">Logout</a>
+            </ul>
+                </form>     
+                
+        </div>
+    </nav>
+    <div class="container i">
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <a href="mentor-menu.html"  class="btn btn-default btn-lg btn-block btn-huge active">Current Training</a>
+            </div>
+            <div class="col-md-3">
+                <a href="mentor-completed-training.html" class="btn btn-default btn-lg btn-block btn-huge">Completed Training</a>
+            </div>
+            <div class="col-md-3">
+                <a href="mentor-edit-skills.html" class="btn btn-default btn-lg btn-block btn-huge">Edit Skills</a>
+            </div>
+
+            </div>
+            <hr>
+            <div class="container table">
+          
+                <p id="demo"></p>
+                <script>myfunction() </script>      
+    
+        </div>
+</body>
+</html>

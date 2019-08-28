@@ -6,7 +6,7 @@
     <title>Available trainners</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='available-trainers.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='completed-training.css'>
     <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="bootstrap.min.js"></script>
     <script src="jquery.min.js"></script>
@@ -14,6 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <script src='main.js'></script>
     <style>
       .checked {
@@ -45,75 +46,33 @@
         function myfunction() { 
         
           var trainer_details = [
-            ['Ragavan','Spring','10days', `
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>`, '3'],
-            ['Ram', 'NodeJS','8days',`
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            `, '4'],
-            ['John','ReactJS','10days', `
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star "></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            `, '4'],
-            ['Dinesh','AngularJS','10days', `
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            `, '3'],
-            ['Ragavan', 'mongoDB','2days',`
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            `, '4'],
-            ['John','HTML & CSS','2days', `
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            `, '4'],
-            ['Dinesh','Javascript & Jquery','3days', `
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            `, '3'],
-            ['Ram','Amazon Cloud','10days', `
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            `, '4']
+            ['John','ReactJS', `
+             <div class="w3-light-grey w3-round-xlarge">
+             <div class="w3-container w3-green w3-round-xlarge" style="width:100%">100%</div>`],
+            ['Ram', 'NodeJS', 
+            `<div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-container w3-green w3-round-xlarge" style="width:100%">100%</div>`],
+            [ 'John','HTML & CSS',
+            `<div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-container w3-green w3-round-xlarge" style="width:100%">100%</div>`],
+            
+            ['Dinesh','Javascript & Jquery',
+            `<div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-container w3-green w3-round-xlarge" style="width:100%">100%</div>`],
             
         ];
         
-        var data='<table class="table" id="myTable"><thead><tr><th>Trainer</th><th>TrainerName</th><th>Course Name</th><th>Time Duration</th><th>Average Rating</th><th>No.of.Traings Completed</th><th></th></tr><tbody>';
+        var data='<table class="table" id="myTable"><thead><tr><th>Trainer</th><th>TrainerName</th><th>Course Name</th><th>Percentage Completed</th></tr><tbody>';
         
-        for(i=0;i<8;i++)
+        for(i=0;i<4;i++)
         {
           data = data + '<tr><td><img src="user_icon.jpg" width="42" height="42"></td>';
-          for(j=0;j<5;j++)
+          for(j=0;j<3;j++)
           {
             data = data + '<td>'+trainer_details[i][j]+'</td>';
           }
         
-          data = data + '<td><a href="#" class="btn btn-primary" style="width:10em" role="button">Propose Training</a></td></tr>';
+          
           
         }
         

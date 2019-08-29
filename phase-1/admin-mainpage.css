@@ -1,6 +1,7 @@
 body {
     background-image:url('light background.jpg');
     background-size: cover;
+     /* background-position:center;  */
 }
 
 
@@ -25,8 +26,20 @@ body {
 }
 hr{
     margin-left: -17%;
-   
 }
 .container.table{
     margin-left: -10%;
+}
+#user-block{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+hr{
+    margin-left: -17%;
+}
+#mentor{
+    padding: 3%;
+}
+#user{
+    padding: 3%;
 }
